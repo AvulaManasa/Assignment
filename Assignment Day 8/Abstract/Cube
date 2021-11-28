@@ -1,0 +1,11 @@
+package com.shape3d.demo;
+
+public abstract class Cube extends Shape3d {
+	public void calculateVolume(){
+		System.out.println("Volume of cube is : "+getEdge()*getEdge()*getEdge());
+	}
+	public void calculateSurfaceArea(){
+		System.out.println("SurfaceArea of cube is : "+6*getEdge()*getEdge());
+		//return (6*getEdge()*getEdge());
+	}
+}
