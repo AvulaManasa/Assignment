@@ -1,0 +1,16 @@
+package com.worker;
+
+public class DailyWorker extends Worker {
+	private int hours;
+    DailyWorker(String n,float r,int h)
+    {
+        super(n,r);
+        hours = h;
+    }
+    public float comPay()
+    {
+        int days=hours/24;
+        return salaryrate*days;
+    }
+}
+
