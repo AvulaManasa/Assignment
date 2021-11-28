@@ -1,0 +1,16 @@
+package com.zoo.demo;
+
+import org.animals.demo.*;
+
+public class DelhiZoo {
+public static void main(String[] args) {
+		
+		Tiger tiger = new Tiger();
+		tiger.displayTiger();
+		Deer deer = new Deer();
+		deer.displayDeer();
+		Lion lion = new Lion();
+		lion.displayLion();
+
+	}
+}
