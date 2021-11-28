@@ -1,0 +1,45 @@
+package com.manasa.demo;
+
+public class CountOfEggs {
+	private int count;
+	private int gross;
+	private int dozen;
+	private int remaining;
+	
+	
+	public int getGross() {
+		calculateGross();
+		return gross;
+	}
+	public int getDozen() {
+		calculateDozen();
+		return dozen;
+	}
+	public int getRemaining() {
+		calculateRemaining();
+		return remaining;
+	}
+	public void setCount(int count) {
+		this.count = count;
+	}
+	public int calculateGross() {
+		gross=count/144;
+		return gross;
+	}
+	public int calculateDozen() {
+		count=count-(gross*144);
+		dozen=count/12;
+		return dozen;
+	}
+	public int calculateRemaining() {
+		remaining=count-(dozen*12);
+		return remaining;
+	}
+	public void calculateEggs() {
+		System.out.println("Gross = "+gross);
+		System.out.println("Dozen = "+dozen);
+		System.out.println("remaining eggs = "+remaining);
+	}
+	
+
+}
