@@ -1,0 +1,31 @@
+package com.dictionary.demo;
+import java.util.HashMap;
+import java.util.Set;
+import java.util.Scanner;
+
+public class MyDictionary {
+
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		HashMap<String, String> words=new HashMap<String, String>();
+		words.put("success", "the accomplishment of an aim or purpose");
+		words.put("brave", "ready to face and endure danger or pain; showing courage");
+		words.put("courage", "the ability to do something that frightens one");
+		words.put("mango", "it is a fruit");
+		words.put("violet","it is a color");
+		Set<String> keys=words.keySet();
+		for(String word:keys) {
+			System.out.println(word+" have meaning : "+words.get(word));
+		}
+		System.out.println("Enter the user word: ");
+		String userWord=sc.next();
+			if(words.containsKey(userWord)) {
+			
+				System.out.println(userWord+" meaning - "+words.get(userWord));
+			}
+			else
+				System.out.println("key meaning is not found in dictionary");
+
+	}
+
+}
